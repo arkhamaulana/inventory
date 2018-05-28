@@ -3,6 +3,7 @@
 @section('content')
 
   <hr>
+  <button id="btn_add" name="btn_add" class="btn btn-primary pull-left">Peminjaman</button>
   <button id="btn_add" name="btn_add" class="btn btn-primary pull-right">Add New Product</button>
     <div class="row-fluid">
       <div class="span12">
