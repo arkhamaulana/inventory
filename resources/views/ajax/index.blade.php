@@ -3,7 +3,7 @@
 @section('content')
 
   <hr>
-  <button id="btn_add" name="btn_add" class="btn btn-primary pull-left">Peminjaman</button>
+  <button type="button" class="pinjam-modal btn btn-primary btn-lag" data-toggle="modal" data-target="#pinjam">Pinjam</button>
   <button id="btn_add" name="btn_add" class="btn btn-primary pull-right">Add New Product</button>
     <div class="row-fluid">
       <div class="span12">
@@ -93,6 +93,35 @@
                   <button type="button" id="btn-save" class="btn btn-primary" value="add">Save Changes</button>
                   <input type="hidden" id="id" name="id" value="0">
               </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="pinjam" tabindex="-1" role="dialog" aria-labelledby="pinjamLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <form action="" method="post" class="form-horizontal" role="form">
+                      {!! csrf_field() !!}
+              <div class="modal-header">
+                  <h4 class="modal-title" id="pinjamLabel">Add Data</h4>
+              </div>
+              <div class="modal-body">
+                      <div class="form-group row add">
+                          <label class="control-label col-sm-12">Jenis Barang </label>
+                          <div class="col-sm-12">
+                              <select class="form-control">
+                                <option>Contoh 1</option>
+                                <option>Contoh 2</option>
+                                <option>Contoh 3</option>
+                              </select>
+                          </div>
+                      </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" id="" class="btn btn-primary">Pinjam</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              </form>
           </div>
       </div>
   </div>
